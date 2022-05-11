@@ -1,0 +1,34 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p babel:watch sass:watch",
+    "serve": "http-server -p 8080",
+    "serve:watch": "nodemon -e 'js,css,html' -x npm run serve",
+    "babel:watch": "npx babel --watch src --out-dir public/js --presets react-app/prod",
+    "sass:watch": "sass --watch src/index.scss public/css/bundle.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PravinKumar95/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PravinKumar95/Portfolio/issues"
+  },
+  "homepage": "https://github.com/PravinKumar95/Portfolio#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.0",
+    "nodemon": "^2.0.16",
+    "npm-run-all": "^4.1.5"
+  }
+}
